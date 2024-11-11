@@ -1,5 +1,5 @@
 ## Interface: 11200
-## Title: XyTracker
+## Title: XyTracker-EN
 ## Version: 1.4.0
 ## Author: 无道暴君
 ## Notes: 记录许愿和出分，团队频道输入xy+空格+许愿，已适配英文端
