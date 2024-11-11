@@ -398,16 +398,18 @@ end
 -- 处理系统消息，更新许愿信息
 function XyTracker_OnSystemMessage()
     local value1, value2 = string.match(arg1, "(%S+)%s+(.*)")
-    if string.lower(value1) == "xy" then
-        local Xy = value2
-        XyTracker_OnXy(arg2, Xy)
-        XyTracker_UpdateList()
-        syncXy()   
-    elseif XyOnlyMode == 0 and string.find(arg1, "|Hitem:") > 0 then
-         local Xy = arg1
-         XyTracker_OnXy(arg2, Xy)
-         XyTracker_UpdateList()
-         syncXy()
+    if value1 then
+        if string.lower(value1) == "xy" then
+            local Xy = value2
+            XyTracker_OnXy(arg2, Xy)
+            XyTracker_UpdateList()
+            syncXy()
+        elseif XyOnlyMode == 0 and string.find(arg1, "|Hitem:") then
+            local Xy = arg1
+            XyTracker_OnXy(arg2, Xy)
+            XyTracker_UpdateList()
+            syncXy()
+        end
     end
 end
 
