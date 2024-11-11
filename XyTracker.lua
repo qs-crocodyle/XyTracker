@@ -499,7 +499,7 @@ function XyTracker_OnAnnounceButtonClick()
         SendChatMessage("Everyone has done their SR", "RAID", this.language, nil);
     else
         SendChatMessage("以下人员未许愿，请尽快许愿：" .. NoXyList, "RAID", this.language, nil);
-        SendChatMessage("Need SR from the following ppl：" .. NoXyList, "RAID", this.language, nil);
+        SendChatMessage("Missing SR from the following ppl：" .. NoXyList, "RAID", this.language, nil);
     end
 end
 
